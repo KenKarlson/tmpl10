@@ -1,0 +1,133 @@
+/* Общие стили */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+/* Стили для хедера */
+.header {
+  height: 100vh; /* Высота на весь экран */
+  background: 
+      linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), /* Затемнение */
+      url('001.jpg') no-repeat center center/cover; /* Фоновая картинка */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+.header__container{
+  margin: 0 auto;
+  width: 1320px;
+}
+
+.header-top {
+  height: 120px; /* Высота верхней области */
+  padding-top: 60px; /* Верхний отступ */
+  display: flex;
+  justify-content: flex-end; /* Логотип справа */
+}
+
+.logo {
+  width: 80px;
+  height: 80px;
+  background-color: #fff; /* Белый логотип (можно заменить на картинку) */
+}
+
+.header-bottom {
+  padding-bottom: 60px; /* Нижний отступ */
+}
+
+.header-bottom h1 {
+  color: white;
+  font-size: 48px;
+  max-width: 800px;
+}
+
+/* Контейнер (адаптивный под разные экраны) */
+.container {
+  width: 100%;
+  max-width: 1320px; /* Максимальная ширина для 1920px */
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.section {
+  height: 300px; /* Высота секции (можно изменить) */
+  margin: 20px 0;
+  background-color: #f0f0f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Футер */
+.footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Адаптация под разные экраны */
+@media (max-width: 1320px) {
+  .container {
+      max-width: 1140px; /* Для экранов 1320px */
+  }
+}
+
+@media (max-width: 1200px) {
+  .container {
+      max-width: 960px; /* Для экранов 1200px */
+  }
+  .header-bottom h1 {
+      font-size: 36px;
+  }
+}
+
+@media (max-width: 992px) {
+  .container {
+      max-width: 720px; /* Для экранов 992px */
+  }
+  .header-bottom h1 {
+      font-size: 32px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+      max-width: 540px; /* Для экранов 768px */
+  }
+  .header-bottom h1 {
+      font-size: 28px;
+  }
+}
+
+@media (max-width: 576px) {
+  .container {
+      max-width: 100%; /* Для экранов 576px и меньше */
+      padding: 10px;
+  }
+  .header-bottom h1 {
+      font-size: 24px;
+  }
+  .header-top {
+      height: 80px;
+      padding-top: 30px;
+  }
+  .logo {
+      width: 60px;
+      height: 60px;
+  }
+}
+
+@media (max-width: 400px) {
+  .header-bottom h1 {
+      font-size: 20px;
+  }
+}
