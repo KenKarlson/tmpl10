@@ -4,31 +4,41 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!--add tags php template path-->
+    <title><?$APPLICATION->ShowTitle();?></title>
     <title>Адаптивный сайт</title>
+    <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <!--panel-->
+    <div id="panel"><?$APPLICATION->ShowPanel();?></div>
     <!-- Хедер (полноэкранный с затемненным фоном) -->
     <header class="header">
       <div class="header__container">
         <div class="header-top">
           <!-- Логотип (можно заменить на свой) -->
-          <div class="logo"></div>
+          <div class="logo">
+            <a class="brand" href="<?=SITE_DIR?>"></a>
+          </div>
         </div>
         <div class="header-bottom">
           <!-- Крупный текст (можно изменить) -->
-          <h1>Привет, это мой сайт!</h1>
+          <h1 class="header-bottom--text">Привет, этот текст можно и нужно изменить!</h1>
         </div>
       </div>
     </header>
 
     <!---add includes modules-->
     <!-- Основное содержимое (7 секций) -->
-    <main class="container">
-      <section class="section">Секция 1</section>
-      <section class="section">Секция 2</section>
-      <section class="section">Секция 3</section>
+    <main>
+      <section class="section section1" >
+        <div class="container">Секция 1</div>
+      </section>
+      <section class="section section2">
+        <div class="container">Секция 2</div>
+      </section>
+      
+      Секция 3</section>
       <section class="section">Секция 4</section>
       <section class="section">Секция 5</section>
       <section class="section">Секция 6</section>
@@ -37,7 +47,7 @@
 
     <!-- Футер -->
     <footer class="footer">
-      <p>© 2023 Мой сайт. Все права защищены.</p>
+      <p>© 2025 Тестовый сайт. Все права защищены.</p>
       <!---add все остальное и php и чтоб работало----->
     </footer>
   </body>
