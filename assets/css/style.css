@@ -13,7 +13,7 @@ body {
 /* Стили для хедера */
 .header {
   height: 100vh; /* Высота на весь экран */
-  background: 
+  background:
       linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9)), /* Затемнение */
       url('002.jpg') no-repeat center center/cover; /* Фоновая картинка */
   display: flex;
