@@ -129,20 +129,48 @@ body {
   font-size: 45px;
   text-transform: uppercase;
 }
-.section5__content{
-  margin: 0;
-  padding: 0;
+
+.section5__content {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
+  gap: auto;
 }
-.section5__content :not(:last-child){
+
+.section5__card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Основное выравнивание по верху */
+  align-items: center;
+  width: 250px;
+  padding: 20px;
+}
+
+.section5__card__img {
+  align-self: flex-start; /* Прижимаем изображение к левому краю */
+  margin-bottom: 15px;
+  width: 100%;
+}
+
+.section5__card:not(:last-child) {
   margin-right: 10px;
 }
+
+
+
 .section5__card__img{
+  max-width: 250px;
+  max-height: 300px;
   margin-bottom: 20px;
-  background-color: aqua;
+  background-color: rgb(247, 249, 249);
+  overflow: hidden;
+  opacity:inherit;
+  border-radius: 10px; /* Если хотите круглые изображения */
+}
+.section5__card__img img {
+  width: 250px; /* Размер изображения */
+  height: 300px;
+  
+  object-fit: cover; /* Чтобы изображение правильно заполняло пространство */
 }
 .section5__card__title{
   margin: 0;
@@ -153,6 +181,7 @@ body {
   color: #3C3939;
 }
 .section5__card__subtitle{
+  margin-bottom: 30px;
   font-size: 18px;
   color: #3C3939;
 }
